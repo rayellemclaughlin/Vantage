@@ -20,8 +20,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#0008a4', // Updated blue
-                        secondary: '#212529', // GitLab dark gray
+                        primary: '#179986', // Updated teal
+                        secondary: '#212529', //  dark gray
                     }
                 }
             }
@@ -31,7 +31,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0008a4 0%, #fcfcfe 40%, #0008a4 80%, #f8f8fc 100%);
+            background: linear-gradient(135deg, #179986 0%, #fcfeff 40%, #179986 80%, #b3b7b8 100%);
         }
         .print-button {
             box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
@@ -48,17 +48,17 @@
         .section-card:hover {
             transform: translateY(-5px) scale(1.02);
             box-shadow: 0 12px 24px rgba(79, 70, 229, 0.08);
-            border-color: #4F46E5;
+            border-color: #179986;
         }
         .skill-pill {
-            box-shadow: 0 1px 4px rgba(0, 8, 164, 0.08);
+            box-shadow: 0 1px 4px rgba(23, 153, 134, 0.08);
             font-weight: 500;
-            border: 1.5px solid #0008a4;
+            border: 1.5px solid #179986;
         }
         .skill-pill:hover {
-            background-color: #0008a4;
+            background-color: #179986;
             color: #fff;
-            box-shadow: 0 2px 8px rgba(0, 8, 164, 0.12);
+            box-shadow: 0 2px 8px rgba(23, 153, 134, 0.12);
         }
         @media print {
             .no-print {
@@ -86,9 +86,11 @@
         .skill-bar {
             width: 0;
             transition: width 2.5s cubic-bezier(.4,0,.2,1);
+            background-color: #34578c;
         }
         .skill-bar.animated {
             width: 100% !important;
+            background-color: #34578c !important;
         }
     </style>
 </head>
@@ -100,7 +102,7 @@
                 <img src="headshot.jpg" alt="Rayelle McLaughlin Headshot" width="160" height="160" class="rounded-full border-4 border-primary shadow-2xl object-cover mr-8" />
                 <div class="flex flex-col items-start">
                     <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 drop-shadow-lg text-left">Rayelle McLaughlin</h1>
-                    <h2 class="text-2xl md:text-3xl text-primary font-semibold mb-6 text-left">Strategic Administrative Partner</h2>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-left" style="color:#34578c">Strategic Administrative Partner</h2>
                 </div>
             </div>
             <p class="max-w-2xl mx-auto text-lg text-gray-700 mb-8">Executive support with precision, discretion, <br> and systems that make leadership smoother.</p>
@@ -123,10 +125,7 @@
                 </div>
             </div>
             <div class="flex flex-wrap justify-center gap-4">
-                <button onclick="window.print()" class="print-button flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl text-lg font-bold shadow-lg border-2 border-primary hover:scale-105 transition">
-                    <i data-feather="printer" class="w-5 h-5"></i>
-                    Print Resume
-                </button>
+                
                 <button id="downloadPDF" class="print-button flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-xl text-lg font-bold shadow-lg border-2 border-secondary hover:scale-105 transition">
                     <i data-feather="download" class="w-5 h-5"></i>
                     <a href="resume.pdf" download="McLaughlin_Resume_Vantage.pdf" class="text-white no-underline">Download PDF</a>
@@ -137,7 +136,8 @@
 
     <!-- Why Section (moved to top) -->
     <section class="bg-white rounded-xl shadow-md p-6 mt-12 mb-12 section-card print-section border border-primary/10 mx-6 md:mx-32 lg:mx-64 xl:mx-80 fade-in">
-            <div class="text-center mb-4">
+            
+             <div class="text-center mb-4">
                 <h2 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-1 flex items-center justify-center">
                     <img src="image.png" alt="Logo" width="32" height="32" class="mr-2 rounded-lg shadow-md animate-bounce" />
                     Why Vantage Data Centers?
@@ -152,53 +152,53 @@
         </section>
        
 <!-- Value Proposition -->
-<section class="py-5 px-6 mb-12 bg-gradient-to-br from-gray-100 via-gray-300 to-gray-200 rounded-2xl shadow-2xl w-full">
+<section class="py-5 px-6 mb-0 bg-gradient-to-br from-gray-100 via-gray-300 to-gray-200 rounded-2xl shadow-2xl w-full">
     <div class="container mx-auto px-2 mb-12 w-full" style="max-width:100%">
         <div class="text-center mb-4">
-            <h2 class="text-2xl md:text-3xl font-serif font-bold text-black mb-1">Why Partner With Me?</h2>
+            <h2 class="text-2xl md:text-3xl font-serif font-bold" style="color:#34578c; margin-bottom: 0.5rem;">Why Partner With Me?</h2>
             <p class="text-base text-gray-700 max-w-xl mx-auto">I don't just manage calendars - I amplify executive effectiveness through strategic support and operational excellence.</p>
         </div>
         <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-8">
-            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#7c69fa33] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
+            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#ffffff] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
                 <div class="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-1">
                     <i data-feather="clipboard" class="w-5 h-5"></i>
                 </div>
-               <h3 class="text-lg font-bold text-primary mb-1">Board Partner</h3>
+               <h3 class="text-lg font-bold mb-1" style="color:#34578c">Board Partner</h3>
   <p class="text-gray-700 text-sm">I prepare board decks, agendas, and minutes that lead to clear decisions.</p>
 </div>
-            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#7c69fa33] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
+            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#ffffff] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
                 <div class="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-1">
                     <i data-feather="airplay" class="w-5 h-5"></i>
                 </div>
-                <h3 class="text-lg font-bold text-primary mb-1">Travel and Schedule</h3>
+                <h3 class="text-lg font-bold mb-1" style="color:#34578c">Travel and Schedule</h3>
   <p class="text-gray-700 text-sm">I orchestrate Outlook calendars and 60+ global trips each year with zero disruption.</p>
 </div>
-            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#7c69fa33] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
+            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#ffffff] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
                 <div class="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-1">
                     <i data-feather="calendar" class="w-5 h-5"></i>
                 </div>
-                <h3 class="text-lg font-bold text-primary mb-1">Meeting Operations</h3>
+                <h3 class="text-lg font-bold mb-1" style="color:#34578c">Meeting Operations</h3>
   <p class="text-gray-700 text-sm">I schedule rooms, set agendas, capture actions, and follow through until done.</p>
 </div>
-            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#7c69fa33] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
+            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#ffffff] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
                 <div class="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-1">
                     <i data-feather="shield" class="w-5 h-5"></i>
                 </div>
-                <h3 class="text-lg font-bold text-primary mb-1">Trusted Confidant</h3>
+                <h3 class="text-lg font-bold mb-1" style="color:#34578c">Trusted Confidant</h3>
                 <p class="text-gray-700 text-sm">I manage sensitive information and executive communication with complete discretion.</p>
             </div>
-            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#7c69fa33] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
+            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#ffffff] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
                 <div class="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-1">
                     <i data-feather="layers" class="w-5 h-5"></i>
                 </div>
-                <h3 class="text-lg font-bold text-primary mb-1">Expense and Reporting</h3>
+                <h3 class="text-lg font-bold mb-1" style="color:#34578c">Expense and Reporting</h3>
   <p class="text-gray-700 text-sm">I process expenses quickly and keep budgets and reports at 100% accuracy.</p>
 </div>
-            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#7c69fa33] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
+            <div class="bg-gradient-to-br from-white via-[#7c69fa1a] to-[#ffffff] p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-primary/20 skill-card">
                 <div class="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-1">
                     <i data-feather="folder" class="w-5 h-5"></i>
                 </div>
-                <h3 class="text-lg font-bold text-primary mb-1">SharePoint and Collaboration</h3>
+                <h3 class="text-lg font-bold mb-1" style="color:#34578c">SharePoint and Collaboration</h3>
   <p class="text-gray-700 text-sm">I maintain shared spaces and access so teams can move work forward.</p>
 </div>
         </div>
@@ -210,7 +210,7 @@
     <section class="py-4 px-6 bg-white rounded-2xl shadow-2xl min-h-[420px] flex flex-col items-center justify-center w-full">
     <div class="container mx-auto px-2 w-full text-center flex flex-col items-center justify-center" style="max-width:100%">
             <div class="text-center mb-4">
-                <h2 class="text-2xl md:text-3xl font-serif font-bold text-black mb-1">Impact by the Numbers</h2>
+                <h2 class="text-2xl md:text-3xl font-serif font-bold" style="color:#179986; margin-bottom: 0.5rem;">Impact by the Numbers</h2>
                 <p class="text-base text-gray-700 max-w-xl mx-auto">A snapshot of the results I deliver for executives and teams—measurable, meaningful, and always growing.</p>
             </div>
             <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-8 justify-center">
@@ -248,7 +248,7 @@
     <section class="bg-white rounded-xl shadow-md p-6 mb-8 mt-16 section-card print-section mx-6 md:mx-32 lg:mx-64 xl:mx-80 fade-in">
     <div class="container mx-auto px-0.5 max-w-4xl mx-auto text-center" style="width:100%">
        <div class="text-center mb-4">
-                <h2 class="text-2xl md:text-3xl font-serif font-bold text-black mb-1">Meet Your Next Strategic Partner</h2>
+                <h2 class="text-2xl md:text-3xl font-serif font-bold" style="color:#34578c; margin-bottom: 0.5rem;">Meet Your Next Strategic Partner</h2>
                 <p class="text-base text-gray-700 max-w-xl mx-auto">Below you'll find a resume, but above all, a commitment to making your work—and your life—easier, smarter, and more impactful.</p>
             </div>
            
@@ -275,14 +275,14 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                   <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">Executive and Board Level Support</span>
+                   <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">Executive and Board Level Support</span>
  <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                  <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">Outlook and Microsoft Office Suite Expertise</span>
+                  <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">Outlook and Microsoft Office Suite Expertise</span>
  <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
@@ -290,83 +290,83 @@
                 </div>
                 <div>
                    
-<span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">Confidential Information Management and Discretion</span> <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
+<span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">Confidential Information Management and Discretion</span> <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">Complex Calendar and Scheduling Management</span>
+                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">Complex Calendar and Scheduling Management</span>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">>International and Domestic Travel Coordination</span>
+                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">International and Domestic Travel Coordination</span>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">Meeting Agendas, Briefings, Minutes, and Action Tracking</span>
+                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">Meeting Agendas, Briefings, Minutes, and Action</span>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">Event Planning Logistics</span>
+                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">Event Planning Logistics</span>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">Expense, Budget, and Vendor Management</span>
+                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">Expense, Budget, and Vendor Management</span>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">SharePoint and Global Collaboration Tools</span>
+                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">SharePoint and Global Collaboration Tools</span>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">Project Management and Workflow Optimization</span>
+                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">Project Management and Workflow Optimization</span>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">Customer and Stakeholder Relationship Management</span>
+                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">Customer and Stakeholder Relationship Management</span>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">Report, Presentation, and Data Preparation</span>
+                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">Report, Presentation, and Data Preparation</span>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300">Strong Written and Verbal Communication Skills</span>
+                    <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm transition-all duration-300" style="border-color:#34578c">Strong Written and Verbal Communication Skills</span>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
                     </div>
                 </div>
                 <div>
-                      <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs sm:text-sm transition-all duration-300">Cross Functional Team Coordination and Problem Solving</span>
+                      <span class="skill-pill bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-xs sm:text-sm transition-all duration-300" style="border-color:#34578c">Cross Functional Team Coordination</span>
                     <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2 relative">
                         <span class="skill-bar-label absolute right-2 -top-5 text-xs font-bold text-black opacity-0 transition-opacity duration-300">100%</span>
                         <div class="bg-primary h-2.5 rounded-full animate-pulse skill-bar" style="width: 0%"></div>
